@@ -11,11 +11,13 @@
     --fonte-normal: 'Mitr', sans-serif;
 }
 html,body{
-    height: 100%;
     background-image: linear-gradient(45deg, #3261FA,#0D7EDE,#1CD6F5);
     background-repeat: no-repeat;
     background-attachment: fixed;
 
+}
+main{
+    min-width: 100vw;
 }
 .cabeçalho{
     font-size: 22px;
@@ -31,7 +33,7 @@ html,body{
     gap: 32px;
 }
 .cabeçalho-menu-item{
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 400;
     font-family: var(--fonte-normal);
     font-size: 20px;
