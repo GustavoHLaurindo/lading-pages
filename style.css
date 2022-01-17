@@ -24,11 +24,11 @@ body{
     align-items: center;
     justify-content: space-around;
     padding: 15px;
-    
 }
 .cabeçalho-menu{
     display: flex;
     gap: 32px;
+
 }
 .cabeçalho-menu-item{
     color: rgb(255, 255, 255);
@@ -95,6 +95,11 @@ button{
     border: none;
     box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.5);
 }
+.ceu-pai{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
 .conteudo-segundario{
     display: flex;
     flex-direction: column;
@@ -111,7 +116,7 @@ button{
 .detalhes{
     padding: 1em;
 	border-radius:4px;
-	margin-bottom: 1em;
+	margin: 25px;
     background-color: white;
 	transition: all 0.4s ease-in-out;
 	overflow: hidden;
@@ -158,12 +163,14 @@ button{
 }
 .rodape{
     color: white;
-    
     margin: 0px;
     font-family: var(--fonte-normal);
     padding: 0px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.109);
+    background-position: center center;
+    opacity: 0.9;
+    width: 100vw;
+    background-image: url("https://i.pinimg.com/564x/0f/fa/e3/0ffae3941d35c380d3ce2eeff7ea6b8b.jpg");
 }
 .rodape > p a{
     text-decoration: none;
