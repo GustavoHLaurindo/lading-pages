@@ -10,15 +10,13 @@
     --fonte-destaque: 'Press Start 2P', cursive;
     --fonte-normal: 'Mitr', sans-serif;
 }
-html,body{
+body{
     background-image: linear-gradient(45deg, #3261FA,#0D7EDE,#1CD6F5);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
+}
 
-}
-main{
-    min-width: 100vw;
-}
 .cabeçalho{
     font-size: 22px;
     display: flex ;
@@ -60,13 +58,30 @@ main{
 }
 .titulo-conteudo-principal-titulo{
     font-family: var(--fonte-destaque);
-    color: rgb(224, 105, 7);
+    color: rgb(251, 125, 7);
     font-size: 40px;
+    margin-left: 20px;
+}
+.picareta{
+    width: 200px;
+    height: 200px;
+    animation: quebra 2s infinite;
+
+}
+@keyframes quebra{
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+
 }
 .titulo-conteudo-principal-subtitulo{
     font-family: var(--fonte-normal);
     color: white;
     font-weight: 300;
+    margin: 20px;
     font-size: 23px;
 }
 button{
@@ -74,6 +89,7 @@ button{
     background-color: rgb(255, 255, 255);
     width: 180px;
     height: 50px;
+    margin: 15px;
     font-family: var(--fonte-normal);
     color: rgb(0, 0, 0);
     border: none;
@@ -89,8 +105,8 @@ button{
     margin-top: 20px;
     font-family: var(--fonte-destaque);
     margin-bottom: 50px;
-    font-size: 20px;
-    color: white;
+    font-size: 25px;
+    color: rgb(251, 125, 7);
 }
 .detalhes{
     padding: 1em;
@@ -98,27 +114,28 @@ button{
 	margin-bottom: 1em;
     background-color: white;
 	transition: all 0.4s ease-in-out;
-	max-height: 20px;
 	overflow: hidden;
-    max-width: 500px;
+    width: 400px;
     font-family: var(--fonte-destaque);
     font-size: 15px;
 }
 [open].detalhes {
 	background-color: rgba(0,0,0,0.1);
-	max-height: 500px;
+	max-height: 400px;
     color: white;
 }
 .conteudo-sumario > p{
     font-family: var(--fonte-normal);
-    font-size: 15px;
+    font-size: 16px;
+    text-align: center;
 }
 .detalhes summary {
 	outline: none;
 	cursor: pointer;
+    font-size: 15px;
     
 }
-
+   
 [open].detalhes summary {
 	padding-bottom: 1em;
     display: flex;
@@ -126,32 +143,47 @@ button{
     align-items: center;
 }
 .gif{
-    width: 500px;
-    height: 250px;
-    margin-left: auto;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    padding-top: 20px;
+    display: block;
+}
+.gif-dinheiro{
+    width: 300px;
+    padding-top: 30px;
+    height: 200px;
+    margin: auto;
     display: block;
 }
 .rodape{
-    display: flex;
-    align-items: end;
-    flex-direction: row;
-    justify-content: center;
     color: white;
-    height: 30px;
+    
     margin: 0px;
+    font-family: var(--fonte-normal);
     padding: 0px;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.109);
+}
+.rodape > p a{
+    text-decoration: none;
+    color: turquoise;
+    padding-top: 20px;
+}
+.rodape > p a:hover{
+    text-decoration: underline;
 }
 .container-bloco{
     display: flex;
     align-items: center;
-    flex-direction: column;
 }
 .bloco{
-    height: 200px;
+    margin: 20px auto 0px auto;
+    transition-duration: 1.5s;
+    transition-delay: 0.3s;
     width: 200px;
-    transition-duration: 1s;
+    height: 200px;
 }
 .bloco:active, .bloco:hover{
-    transform: translateX(200px) rotate(45deg);
+    transform: rotate(360deg);
 }
