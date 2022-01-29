@@ -28,7 +28,6 @@ body{
 .cabeçalho-menu{
     display: flex;
     gap: 32px;
-
 }
 .cabeçalho-menu-item{
     color: rgb(255, 255, 255);
@@ -60,7 +59,31 @@ body{
     font-family: var(--fonte-destaque);
     color: rgb(251, 125, 7);
     font-size: 40px;
-    margin-left: 20px;
+    border-right: 2px solid rgb(255, 255, 255);
+    overflow: hidden;
+    letter-spacing: 4px;
+}
+.tipo-animacao{
+    animation: pisca 600ms infinite ease-in-out, acao 3.5s infinite steps(50) 2s normal both; 
+
+}
+@keyframes acao {
+    from{
+        width: 0;
+    }
+    to{
+        width: 9.3em;
+        
+    }
+    
+}
+@keyframes pisca{
+    from{
+        border-right-color: rgb(255, 255, 255);
+    }
+    to{
+        border-right-color: transparent;
+    }
 }
 .picareta{
     width: 200px;
@@ -81,7 +104,6 @@ body{
     font-family: var(--fonte-normal);
     color: white;
     font-weight: 300;
-    margin: 20px;
     font-size: 23px;
 }
 button{
